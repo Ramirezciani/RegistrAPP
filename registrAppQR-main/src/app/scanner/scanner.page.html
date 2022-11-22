@@ -1,0 +1,9 @@
+<ion-content class="color_background"  [fullscreen]="true">
+</ion-content>
+
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+    <ion-button (click)="scanQR()" expand="block">Registrar Asistencia</ion-button>
+    <ion-button (click)="stopScan()" color="danger"  expand="block" [routerLink]="['/home']">Cancelar</ion-button>
+  </ion-toolbar>
+</ion-footer>

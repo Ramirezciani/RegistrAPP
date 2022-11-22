@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar id="color_barra">
+    <ion-title>
+      Bienvenido: <br>{{ usuario }} {{ apellido }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="color_background" [fullscreen]="true" >
+  <p>extras:{{cod}}</p>
+  <p>extras:{{nam}}</p>
+  <p>localstorage:{{codigo}}</p>
+  <p>localstorage:{{asignatura}}</p>
+
+  <ion-button  class="btn-ingresar" type="submit" color="primary"  
+    [routerLink]="['/scanner']" >Scanear</ion-button>
+ 
+</ion-content>
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="btn-ingresar" type="submit" color="primary"><a href="tel:+56923232323">Contactanos</a></ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="btn-ingresar" type="submit" color="primary"  
+    [routerLink]="['/recuperar-pass']" >Cambiar Contreaseña</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+

@@ -1,0 +1,31 @@
+<ion-header >
+  <ion-toolbar id="color_barra">
+    <ion-title >RegristrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="color_background">
+  <div class="login">
+    <ion-img id="logo" src="assets/images/logo1.png" ></ion-img>
+    <ion-item id="formulario">
+      <ion-label></ion-label>
+      <ion-input id="" [(ngModel)]="mdl_correo" placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item id="formulario">
+      <ion-label></ion-label>
+      <ion-input [(ngModel)]="mdl_contrasena" type="Password" placeholder="Password"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="container" >
+
+    <ion-button class="btn" type="submit" color="warning"  (click)="Ingresar()">
+      Ingresar</ion-button>
+
+      
+    <ion-button class="btn" type="submit" color="danger" routerLink="/registrate" >
+      Registrate</ion-button>
+  </div>
+  <a [routerLink]="['/recuperar-pass']">Olvide mi contraseña</a>
+
+</ion-content>

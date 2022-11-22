@@ -1,0 +1,1 @@
+# reegistrApp_QR

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar id="color_barra">
+    <ion-title>Registarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container" class="color_background">
+  <h2>Completa los siguientes datos para registrarte</h2>
+  <ion-img id="login" src="assets/images/login2.svg" ion-padding></ion-img>
+  <div class="container">
+
+    <ion-item class="item">
+      <ion-label position="floating">Correo Duoc</ion-label>
+      <ion-input autofocus="true"  [(ngModel)]="mdl_correo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input autofocus="true"  [(ngModel)]="mdl_nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input autofocus="true"  [(ngModel)]="mdl_apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input  type="password" autofocus="true"  [(ngModel)]="mdl_pass1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Confirmar Contraseña</ion-label>
+      <ion-input type="password" autofocus="true"  [(ngModel)]="mdl_pass2"></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-button class="btn" type="submit" color="primary"  (click)="almacenar()" >Registrarse</ion-button>
+  <ion-button class="btn" type="reset" color="danger" routerLink="/login">Cancelar
+  </ion-button>
+</ion-content>
