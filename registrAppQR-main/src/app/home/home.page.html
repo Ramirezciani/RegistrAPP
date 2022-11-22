@@ -14,12 +14,31 @@
 
   <ion-button  class="btn-ingresar" type="submit" color="primary"  
     [routerLink]="['/scanner']" >Scanear</ion-button>
+  <ion-button  class="btn-ingresar" type="submit" color="danger"  
+    [routerLink]="['/login']" >Cerrar Sesion</ion-button>
+  <div class="title">
+    <h2>Noticias e Intereses</h2>
+  </div>
+  
+  <!-- CARTAS DE INTERES -->
+  <ion-card class="card">
+    <img alt="Sede" src="assets/images/sede.jpg" />
+    <ion-card-header>
+      <ion-card-title>Padre Alonso De Ovalle</ion-card-title>
+      <ion-card-subtitle>Informaciones</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Hackaton 2022 Intersedes, se llevara a cabo en PAO
+    </ion-card-content>
+  </ion-card>
  
+
+  <!-- FOOTER -->
 </ion-content>
 <ion-footer [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button class="btn-ingresar" type="submit" color="primary"><a href="tel:+56923232323">Contactanos</a></ion-button>
+      <ion-button class="btn-ingresar" type="submit" color="primary"><a href="tel:+56227120640">Contactanos</a></ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button class="btn-ingresar" type="submit" color="primary"  
