@@ -6,11 +6,26 @@
   </ion-toolbar>
 </ion-header>
 
+
+
 <ion-content class="color_background" [fullscreen]="true" >
-  <p>extras:{{cod}}</p>
-  <p>extras:{{nam}}</p>
-  <p>localstorage:{{codigo}}</p>
-  <p>localstorage:{{asignatura}}</p>
+
+  <div class="asistencia">
+    <h3>Asistencias</h3>
+  </div>
+  <div class="lista">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Id Clase: {{asignatura}}</ion-card-subtitle>
+        <ion-card-title>Asignatura{{id_clase}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Nombre Usuario: {{usuario}}
+      </ion-card-content>
+    </ion-card>
+  
+  </div>
+
 
   <ion-button  class="btn-ingresar" type="submit" color="primary"  
     [routerLink]="['/scanner']" >Scanear</ion-button>

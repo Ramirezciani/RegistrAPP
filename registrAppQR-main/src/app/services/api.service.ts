@@ -52,7 +52,7 @@ export class ApiService {
     })
  }
 
- async Asistencia (correo: string, id_clase: string,) {
+ async Asistencia (correo: any , id_clase: any) {
   let that = this;
   return new Promise(resolve => {
     resolve(that.http.post(that.ruta, {

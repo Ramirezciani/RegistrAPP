@@ -11,11 +11,11 @@ export class HomePage {
   usuario = localStorage.getItem('nombreHome');
   apellido = localStorage.getItem("apellidoHome");
 
-  codigo = localStorage.getItem("codigo");
+  correo = localStorage.getItem('correo');
+  id_clase = localStorage.getItem("codigo");
   asignatura = localStorage.getItem("asignatura");
 
-  cod = localStorage.getItem("cod");
-  nom = localStorage.getItem("nom");
+
 
   
 
@@ -23,12 +23,7 @@ export class HomePage {
   }
 
   ngOnInit(){
-    try {
-      this.cod = this.router.getCurrentNavigation().extras.state.cod;
-      this.nom = this.router.getCurrentNavigation().extras.state.nom;
-    } catch (error) {
-      
-    }
+
   }
 }
 

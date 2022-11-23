@@ -39,22 +39,23 @@ export class ScannerPage implements OnInit {
         that.arreglo = that.texto.split('|',2);
         localStorage.setItem('codigo', that.arreglo[1] );
         localStorage.setItem('asignatura', that.arreglo[0] );
-        this.extrasNav();
+        that.asistencia();
+        that.router.navigate(['home'],{replaceUrl: true,});
         document.querySelector('body').classList.remove('scanner-active');
       }, 1000);
     }
   }
 
-  extrasNav() {
-    let extras : NavigationExtras = {
-      replaceUrl:true,
-      state : {
-        'cod': this.id_clase,
-        'nom': this.asignatura
-      }
-    }
-    this.router.navigate(['home'], extras);
-  }
+  // extrasNav() {
+  //   let extras : NavigationExtras = {
+  //     replaceUrl:true,
+  //     state : {
+  //       'cod': this.id_clase,
+  //       'nom': this.asignatura
+  //     }
+  //   }
+  //   this.router.navigate(['home'], extras);
+  // }
 
   stopScan (){
     BarcodeScanner.showBackground();
@@ -72,19 +73,16 @@ export class ScannerPage implements OnInit {
         let respuesta = await this.api.Asistencia(
           this.correo,
           this.id_clase)
-        
           if(respuesta ["result"] === "OK")
           {
-            let data = await this.api.Asistencia(this.correo, this.id_clase );
-              that.correo = data['result'];
-
+            that.presentToast('Registro Correcto');
+            this.router.navigate(['home'],{replaceUrl: true,});  
           }else{
             that.presentToast('Registro Incorrecto');   
           }
         } catch (error) {
           //TODO INDICAR QUE OCURRIÓ UN ERROR CON LA API
         }
-        
         data.dismiss();
         
     });
@@ -94,7 +92,7 @@ export class ScannerPage implements OnInit {
   async presentToast(mensaje) {
     const toast = await this.toastController.create({
       message: mensaje,
-      duration: 1500,
+      duration: 3000,
       position: 'bottom'
     });
 
